@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+
+  dev-db:
+    image: postgres:13
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: dyPfn8EbdmBYUwxN
+      POSTGRES_DB: bookmark
+    networks:
+      - bookmark
+  test-db:
+    image: postgres:13
+    ports:
+      - 5435:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 53LTn9ChueJks4DX
+      POSTGRES_DB: nest
+    networks:
+      - bookmark
+networks:
+  bookmark:
