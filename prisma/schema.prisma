@@ -27,7 +27,6 @@ model User {
   id        Int        @id @default(autoincrement())
   email     String     @unique
   hash      String
-  gender    String?
   firstName String?
   lastName  String?
   createdAt DateTime   @default(now())
